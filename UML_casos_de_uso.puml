@@ -1,4 +1,21 @@
 @startuml
+
+"Usuario" as usuar
+:Administrador: as Admin
+usecase "Iniciar sesion" as inise
+usecase "Recuperar contraseña" as reccontra
+usecase "Modificar contraseña" as modcontr
+usecase "Cerrar sesion" as cerra
+usecase "Registro usuario" as reusua
+usecase "Instalar programa" as insp
+usuar -- inise
+usuar -- reccontra
+usuar -- modcontr
+usuar -- cerra
+Admin -- reusua
+Admin -- insp
+Admin --|> usuar
+
 actor "new Actor" as nA
 usecase "identificarse" as identifi
 usecase "Pagar" as Paga
