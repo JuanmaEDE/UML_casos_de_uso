@@ -1,4 +1,9 @@
 @startuml
+usecase "Acceder" as acc
+usecase "Registrarse" as reg
+(acc) <.. (reg) : <<extend>>
+
+
 left to right direction
 actor "Cliente" as cl1
 usecase "Confirmar pedido" as cp
