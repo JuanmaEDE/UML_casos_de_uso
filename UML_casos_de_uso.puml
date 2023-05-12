@@ -1,4 +1,13 @@
 @startuml
+usecase sacd #YellowGreen as "=Sacar dinero
+            --
+            + solicitud hecha"
+usecase "Retener tarjeta" as umt #YellowGreen
+umt --|> sacd : <<Extend>>
+note "Description\n condición:\n { historia sospechosa }\n punto de extensión:\n  solicitud hecha" as nota
+sacd <-- nota
+nota -- umt
+
 
 "Ciudadano" as ciu
 usecase "Tomar huellas" as tom
