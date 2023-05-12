@@ -1,0 +1,6 @@
+@startuml
+
+actor :Cliente:
+Usecase uc1 as "Mostrar menú"
+:Cliente: -- (Mostrar menú)
+@enduml
