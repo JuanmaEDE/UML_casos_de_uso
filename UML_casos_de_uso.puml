@@ -1,6 +1,21 @@
 @startuml
 
-actor :Cliente:
-Usecase uc1 as "Mostrar menú"
-:Cliente: -- (Mostrar menú)
+
+left to right direction
+actor "Cliente" as cl
+actor "Restaurante" as re
+rectangle  {
+  usecase "Mostrar menú" as UC1
+  usecase "Pedir comida" as UC2
+
+}
+usecase "Entregar comida" as UC3
+cl -- UC1
+cl -- UC2
+re -- UC3
+re -- UC1
+
+ :cliente: -- (Mostrar menú)
+ Usecase uc1 as "Mostrar menú.."
+actor "Cliente" as ctl
 @enduml
