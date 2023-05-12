@@ -1,5 +1,13 @@
 @startuml
-
+left to right direction
+actor "Cliente" as cl1
+usecase "Confirmar pedido" as cp
+usecase "Cancelar pedido" as cap
+usecase "Devolver cambio" as dc
+cl1 -- cp
+cl1 -- cap
+(cp) ..> (dc) : <<include>>
+(cap) ..> (dc) : <<include>>
 
 left to right direction
 actor "Cliente" as cl
