@@ -1,5 +1,14 @@
 @startuml
 
+"Ciudadano" as ciu
+usecase "Tomar huellas" as tom
+usecase "Registrar entrada" as regen
+ciu -- regen
+regen <.. tom : <<extend>>
+"Ciudadano extranjero" as extra
+extra -- tom
+extra --|> ciu
+
 "Usuario" as usuar
 :Administrador: as Admin
 usecase "Iniciar sesion" as inise
