@@ -1,4 +1,21 @@
 @startuml
+actor "new Actor" as nA
+usecase "identificarse" as identifi
+usecase "Pagar" as Paga
+usecase "Elegir mensajero" as Em
+usecase "Confirmar" as Con
+usecase "Pagar con tarjeta" as Pgt
+usecase "Registrarse" as Regis
+usecase "Pagar con transferencia" as Ptra
+nA -- identifi
+nA -- Paga
+nA -- Em
+nA -- Con
+identifi <.. Regis : <<extend>>
+Paga <|-- Pgt
+Paga <|-- Ptra
+
+
 actor "Cliente" as clped
 usecase "Meter dinero" as Md
 usecase "Pedir azucar" as az
