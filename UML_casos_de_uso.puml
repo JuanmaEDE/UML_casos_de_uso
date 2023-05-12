@@ -1,4 +1,17 @@
 @startuml
+actor "Cliente" as clped
+usecase "Meter dinero" as Md
+usecase "Pedir azucar" as az
+usecase "Pedir Producto" as pp
+usecase "Cancelar" as cancel
+usecase "Devolver dinero" as Devd
+clped -- Md
+clped -- az
+clped -- pp
+clped -- cancel
+pp ..> Devd : <<include>>
+cancel ..> Devd : <<include>>
+
 
 actor "Cliente" as clvu
 actor "Clilente VIP" as vip
