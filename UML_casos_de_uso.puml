@@ -1,4 +1,11 @@
 @startuml
+
+usecase "Pagar" as pag
+usecase "Pagar con tarjeta" as pagt
+usecase "Pagar en efectivo" as pagoe
+ pag <|-- pagt
+pag <|-- pagoe
+
 usecase "Acceder" as acc
 usecase "Registrarse" as reg
 (acc) <.. (reg) : <<extend>>
