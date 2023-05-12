@@ -1,5 +1,13 @@
 @startuml
 
+actor "Cliente" as clvu
+actor "Clilente VIP" as vip
+clvu <|-- vip
+usecase "Reservar vuelo" as rv
+usecase "Elegir asientos" as asie
+vip --> asie
+clvu --> rv
+
 usecase "Pagar" as pag
 usecase "Pagar con tarjeta" as pagt
 usecase "Pagar en efectivo" as pagoe
